@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32428.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste Take Blip PHA", "Teste Take Blip PHA\Teste Take Blip PHA.csproj", "{E8E27F2E-4D7E-4D88-BC21-B40BCCA3F88F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8E27F2E-4D7E-4D88-BC21-B40BCCA3F88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E27F2E-4D7E-4D88-BC21-B40BCCA3F88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E27F2E-4D7E-4D88-BC21-B40BCCA3F88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E27F2E-4D7E-4D88-BC21-B40BCCA3F88F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96F7B323-6484-4F03-AB2E-023C4E194F78}
+	EndGlobalSection
+EndGlobal
