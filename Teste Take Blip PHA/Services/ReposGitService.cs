@@ -20,7 +20,7 @@ namespace Teste_Take_Blip_PHA.Services
 
         public async Task<IEnumerable<GitReposModel>> GetAllGitReposOrgs()
         {
-            return await _httpClient.GetFromJsonAsync<IEnumerable<GitReposModel>>($"{_apiConfig.BaseUrl}takenet").ConfigureAwait(false);
+            return await _httpClient.GetFromJsonAsync<IEnumerable<GitReposModel>>($"{_apiConfig.BaseUrl}takenet?{_apiConfig.Client_Id}&{_apiConfig.Client_Secret}").ConfigureAwait(false);
         }
     }
 }
