@@ -6,6 +6,6 @@ namespace Teste_Take_Blip_PHA.Services
 {
     public interface IReposGitService
     {
-        Task<IEnumerable<GitReposModel>> GetAllGitReposOrgs();
+        Task<ICollection<GitReposModelResponse>> GetAllGitReposOrgs();
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 using System;
 using Teste_Take_Blip_PHA.Configuration;
@@ -25,7 +26,14 @@ namespace Teste_Take_Blip_PHA
         {
             services.Configure<ApiConfig>(Configuration.GetSection(nameof(ApiConfig)));
             services.AddSingleton<IApiConfig>(x => x.GetRequiredService<IOptions<ApiConfig>>().Value);
-            services.AddHttpClient<IReposGitService, ReposGitService>(b => b.BaseAddress = new Uri(Configuration["ApiConfig:BaseUrl"]));
+            services.AddHttpClient<IReposGitService, ReposGitService>(httpClient =>
+            {
+                httpClient.BaseAddress = new Uri(Configuration["ApiConfig:BaseUrl"]);
+                httpClient.DefaultRequestHeaders.Add(
+                    HeaderNames.Accept, "application/vnd.github.v3+json");
+                httpClient.DefaultRequestHeaders.Add(
+                    HeaderNames.UserAgent, "HttpRequestsSample");
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
