@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Teste_Take_Blip_PHA.Configuration;
-using Teste_Take_Blip_PHA.Models.Teste_Take.Models;
+using Teste_Take_Blip_PHA.Models;
 
 namespace Teste_Take_Blip_PHA.Services
 {
@@ -20,7 +20,7 @@ namespace Teste_Take_Blip_PHA.Services
 
         public async Task<IEnumerable<GitReposModel>> GetAllGitReposOrgs()
         {
-            return await _httpClient.GetFromJsonAsync<IEnumerable<GitReposModel>>($"{_apiConfig.BaseUrl}takenet?{_apiConfig.Client_Id}&{_apiConfig.Client_Secret}").ConfigureAwait(false);
+            return await _httpClient.GetFromJsonAsync<IEnumerable<GitReposModel>>($"{_apiConfig.BaseUrl}orgs/takenet?{_apiConfig.Client_Id}&{_apiConfig.Client_Secret}").ConfigureAwait(false);
         }
     }
 }

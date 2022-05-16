@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Teste_Take_Blip_PHA.Models.Teste_Take.Models;
+using Teste_Take_Blip_PHA.Models;
 
 namespace Teste_Take_Blip_PHA.Services
 {
